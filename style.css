@@ -34,3 +34,13 @@
 .font-head {
   font-family: 'Poppins', sans-serif;
 }
+
+/* Fix for the hidden slide dropdown spilling onto the slides */
+.slidev-layout:not(.slidev-presenter) .vc-popover:not(.show) {
+  display: none !important;
+}
+
+/* Alternative target if using Slidev's built-in Goto dialog */
+#slidev-goto-dialog:not([open]) {
+  display: none !important;
+}
