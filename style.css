@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+/*
+  Century Gothic is SSUSD's official brand font (embedded in their template),
+  but it is not a web font and cannot be loaded from Google Fonts or a CDN.
+  Poppins is used here as the closest freely-licensed geometric sans substitute
+  (similar rounded geometric letterforms, similar x-height) for on-screen/web
+  display. See README for notes on using true Century Gothic in the PPTX export.
+*/
+
+:root {
+  --navy: #022760;      /* deep navy - dominant, SSUSD primary */
+  --navy2: #0F5687;     /* secondary navy/blue - wordmark, bands */
+  --sky: #4FA5D7;       /* bright sky blue - accent stripes */
+  --tan: #B19E88;       /* sand/tan - "Sands" accent */
+  --gray: #76797A;      /* jet gray - muted accent */
+  --offwhite: #F2F4F6;
+  --ink: #2A2A2A;
+  --muted: #63666A;
+}
+
+.slidev-layout {
+  font-family: 'Inter', sans-serif;
+  color: var(--ink);
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.font-head {
+  font-family: 'Poppins', sans-serif;
+}
