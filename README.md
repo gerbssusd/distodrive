@@ -62,3 +62,29 @@ speaker-note view).
   attributed on the References slide.
 - SSUSD logo and background art: property of Sierra Sands Unified School
   District, used per the district's own template file.
+
+## Fixes applied (this revision)
+- Fixed a Slidev static-export bug where the internal "go to slide" dialog
+  stayed permanently visible over every slide — added a CSS override to
+  force it hidden by default.
+- Fixed a Slidev bug where `background:` set as a hex color in a slide's
+  frontmatter didn't reliably apply on slides after the first, leaving
+  white text invisible on a white background. Worked around it by painting
+  the background with a full-bleed `<div>` in the slide body instead.
+- Replaced fragile inch-based absolute positioning (which doesn't scale
+  correctly with Slidev's internal canvas system) with a flow-based
+  layout using a negative-margin technique for full-bleed header bands,
+  and percentage/rem-based positioning for the image-background slides.
+- **Rebuilt the title slide**: the accent stripe from the background image
+  was cutting directly through the title text, and the session label was
+  overlapping the logo's "Unified School District" subtitle. Repositioned
+  the whole text block below the navy band with proper clearance, and
+  fixed a case where a heading's font-size utility class was being
+  silently overridden by the theme's own CSS (forced via inline style).
+- Removed redundant double bullet markers.
+- Tightened padding, font sizes, and line-height throughout so every
+  slide fits within a standard 1280×720 presentation screen with no
+  clipping, overflow, or overlapping elements.
+
+All 14 slides have been visually verified via automated browser
+screenshots at 1280×720 (a standard 16:9 presentation resolution).
